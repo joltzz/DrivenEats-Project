@@ -116,3 +116,24 @@ footer{
     font-weight: 400;
     color: #FFFFFF;
 }
+/*JAVASCRIPT */
+.botao-verde {
+    width: 364px;
+    height: 61px;
+    background: #32B72F;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50px;
+    display: none;
+}
+
+.botao-verde p {
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+    font-weight: 700;
+    color: #FFFFFF;
+    display: flex;
+    justify-content: center;
+    margin-top: 18px;
+}

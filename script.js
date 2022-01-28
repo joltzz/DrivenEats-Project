@@ -6,9 +6,9 @@ let sobremesa;
 let valor_prato;
 let valor_bebida;
 let valor_sobremesa;
-let valorTotal=valor_prato+valor_bebida+valor_sobremesa;
 let verifVerde=document.querySelector(".botao-cinza") 
 let container=document.querySelector(".botao-verde");
+let iconeVerde=document.querySelector(".linha-final");
 
 //Função da borda verde dos pratos
 
@@ -131,15 +131,15 @@ function escolherSobremesa4(){
     valor_sobremesa=7.29;
 }
 
+
 function verificaCor(){
     if((prato!=null) && (bebida!=null) && (sobremesa!=null)){
         verifVerde.style.display="none";
         container.style.display = "block";
-}
+    }
 }
 function finalizarPedido(){
     let mensagem;
-    
     mensagem=
     "Olá, gostaria de fazer o pedido: \n- Prato: "
     +prato+
@@ -148,7 +148,8 @@ function finalizarPedido(){
     "\n- Sobremesa: "
     +sobremesa+
     "\nTotal: R$ "
-    +valorTotal+
+    +((valor_prato)+(valor_bebida)+(valor_sobremesa))+
     ".";
+    alert(mensagem)
     window.open("https://wa.me/+5551982012955?text="+ mensagem)
 }
